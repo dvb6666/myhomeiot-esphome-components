@@ -51,6 +51,7 @@ class MyHomeIOT_BLEHost : public Component, public esp32_ble_tracker::ESPBTClien
   void dump_config() override;
   void loop() override;
   void connect() override {}
+  void disconnect() override {};
 
   void register_ble_client(MyHomeIOT_BLEClientNode *client) {
     client->set_ble_host(this);
